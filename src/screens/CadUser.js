@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Button, Center, Input, VStack } from 'native-base';
+import { Button, Center, Input, VStack } from 'native-base';
 
 const CadUser = ({ navigation }) => {
   return (
@@ -14,7 +14,7 @@ const CadUser = ({ navigation }) => {
         <Input placeholder="Nome" w="75%" maxWidth="300px" />
       </Center>
       <Center>
-        <Button onPress={() => navigation.navigate('FiltroPrestadores')}>
+        <Button onPress={() => navigation.navigate('PerfilUser')}>
           Cadastrar
         </Button>
       </Center>

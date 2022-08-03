@@ -5,10 +5,10 @@ const Home = ({ navigation }) => {
   return (
     <VStack space={3} justifyContent="center" mt="20">
       <Center p="20">
-        <Button onPress={() => navigation.navigate('Cliente')}>Cliente</Button>
+        <Button onPress={() => navigation.navigate('CadUser')}>Cliente</Button>
       </Center>
       <Center p="20">
-        <Button onPress={() => navigation.navigate('Prestador')}>
+        <Button onPress={() => navigation.navigate('CadPrest')}>
           Prestador de Serviços
         </Button>
       </Center>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Center, Input, TextArea, VStack } from 'native-base';
 
-const CadastroPrestadores = () => {
+const CadPrest = ({ navigation }) => {
   return (
     <VStack space={3} safeArea>
       <Center>
@@ -30,10 +30,12 @@ const CadastroPrestadores = () => {
         <TextArea h={20} placeholder="Anuncio" w="75%" maxW="300" />
       </Center>
       <Center>
-        <Button>Cadastrar</Button>
+        <Button onPress={() => navigation.navigate('PerfilPrest')}>
+          Cadastrar
+        </Button>
       </Center>
     </VStack>
   );
 };
 
-export default CadastroPrestadores;
+export default CadPrest;
