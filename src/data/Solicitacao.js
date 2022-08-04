@@ -1,9 +1,9 @@
 export default [
   {
     id: 1,
-    categoria: 'categoria',
-    servico: 'seriviço',
-    urgencia: 'urgerncia',
+    categoria: 'teste',
+    servico: 'teste',
+    urgencia: 'teste',
     descricao: 'descricao',
     endereco: 'endereço',
     telefone: 'telefone',

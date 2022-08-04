@@ -1,6 +1,7 @@
 import {
   Avatar,
   Box,
+  Button,
   FlatList,
   HStack,
   Pressable,
@@ -11,13 +12,15 @@ import {
 import React from 'react';
 import Solicitacao from '../data/Solicitacao';
 
-const PerfilUser = () => {
+const PerfilUser = ({ navigation }) => {
   return (
     <Box safeArea>
       <FlatList
         data={Solicitacao}
         renderItem={({ item }) => (
-          <Pressable onPress={() => console.warn("I'm Pressed")}>
+          <Pressable
+            onPress={() => navigation.navigate('CadSolicitacao', item)}
+          >
             <Box
               borderBottomWidth="1"
               _dark={{
@@ -63,8 +66,13 @@ const PerfilUser = () => {
             </Box>
           </Pressable>
         )}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(Solicitacao) => Solicitacao.id}
       />
+      <Button
+        onPress={() => navigation.navigate('CadSolicitacao')}
+      >
+        Nova Solicitação
+      </Button>
     </Box>
   );
 };

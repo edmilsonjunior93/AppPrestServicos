@@ -4,14 +4,17 @@ import {
   CheckIcon,
   Input,
   Select,
+  Text,
   TextArea,
   VStack,
 } from 'native-base';
 import React, { useState } from 'react';
 import Solicitacao from '../data/Solicitacao';
 
-const CadSolicitacao = () => {
-  const [solicitacao, setSolicitacao] = useState(Solicitacao);
+const CadSolicitacao = ({ route, navigation }) => {
+  const [solicitacao, setSolicitacao] = useState(
+    route.params ? route.params : {},
+  );
   return (
     <VStack space={4} alignItems="center" mt="100px">
       <Box w="90%">
